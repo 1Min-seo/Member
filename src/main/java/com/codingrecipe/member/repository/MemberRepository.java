@@ -1,7 +1,11 @@
 package com.codingrecipe.member.repository;
 
-import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
+import com.codingrecipe.member.entity.MemberEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class MemberRepository extends JpaRepository<MemberEntity, Long> {
+import java.util.Optional;
+
+public interface MemberRepository extends JpaRepository<MemberEntity, Long> {
+    // 이메일로 회원 정보 조회 (select * from member_table where member_email=?)
 
 }

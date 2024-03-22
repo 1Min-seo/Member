@@ -3,6 +3,7 @@ package com.codingrecipe.member.controller;
 import com.codingrecipe.member.dto.MemberDTO;
 import com.codingrecipe.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequiredArgsConstructor //
 public class MemberController {
     //생성자 주입
+    @Autowired
     private final MemberService memberService;
 
     //회원 가입 페이지 요청

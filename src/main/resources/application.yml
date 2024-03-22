@@ -1,18 +1,20 @@
 server:
   port:8080
 
-#database 연동 설명
+#database 연동 설정
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sku?serverTimeZone=Asia/Seoul&characterEncoding=UTF-8
+    #각자 PC에 만들어 놓은 Database 이름을 써야 함
+    jdbc-url: jdbc:mysql://localhost:3306/db_codingrecipe
     username: root
-    password: 1q2w3e4r
-   thymeleaf:
-    cache: false
+    password: 1206
+    thymeleaf:
+      cache: false
 
+#스프링 data jpa 설정
 jpa:
-  database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  database-platform: org.hibernate.dialect.MySQL8Dialect
   open-in-view: false
   show-sql: true
   hibernate:
