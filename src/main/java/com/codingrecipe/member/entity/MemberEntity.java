@@ -1,11 +1,9 @@
 package com.codingrecipe.member.entity;
 
-import com.fasterxml.jackson.annotation.JsonTypeId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.logging.log4j.message.AsynchronouslyFormattable;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 
 //테이블 역할
 @Entity
