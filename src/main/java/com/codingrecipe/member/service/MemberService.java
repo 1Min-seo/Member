@@ -12,8 +12,11 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
     public void save(MemberDTO memberDTO) {
-        MemberEntity memberEntity=new MemberEntity();
-
+        //1. dto -> entity 변환
+        //2. repository의 save 메서드 호출
+        MemberEntity memberEntity=MemberEntity.toMemberEntity(memberDTO);
+        //repository의 save 메서드 호출(조건. entity객체를 넘겨줘야 함)
+        //jpa가 제공해주는 save 메서드
         memberRepository.save(memberEntity);
 
     }
