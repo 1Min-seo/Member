@@ -5,18 +5,16 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-
-//테이블 역할
 @Entity
 @Setter
 @Getter
-@Table(name = "member_table")
-public class MemberEntity {
-    @Id //pk 지정
+@Table(name="member_table")
+public class MemberEntity{
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment
     private Long id;
 
-    @Column(unique = true) //unique 제약 조건을 추가
+    @Column(unique = true)
     private String memberEmail;
 
     @Column
@@ -30,6 +28,10 @@ public class MemberEntity {
         memberEntity.setMemberEmail(memberDTO.getMemberEmail());
         memberEntity.setMemberPassword(memberDTO.getMemberPassword());
         memberEntity.setMemberName(memberDTO.getMemberName());
+
         return memberEntity;
     }
 }
+
+
+
